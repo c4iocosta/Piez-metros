@@ -1,5 +1,5 @@
-const C='piezo-v4';
-self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(['./','./index.html'])));self.skipWaiting()});
+const C='piezo-v5';
+self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(['./','./index.html','./apple-touch-icon.png','./icon-192.png','./manifest.json'])));self.skipWaiting()});
 self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch',e=>{const r=e.request;if(r.method!=='GET')return;const u=r.url;
   // imagens de satélite e biblioteca do mapa: usa a cópia guardada primeiro
